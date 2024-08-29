@@ -1,14 +1,17 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AuthModule } from './features/auth/auth.module';
-import { TrainingModule } from './features/training/training.module';
+import { AppRoutingModule } from './app-routing.module';
+import { SharedModule } from './shared/shared.module';
+
+// Import the AppComponent as a standalone component
+import { AppComponent } from './app.component';
 
 @NgModule({
   imports: [
     BrowserModule,
-    AuthModule,
-    TrainingModule
+    AppRoutingModule,
+    SharedModule
   ],
-  bootstrap: [] // No need to declare AppComponent here if it's standalone
+
 })
 export class AppModule { }

@@ -1,0 +1,46 @@
+/* Custom Logo Size */
+.container{
+    margin-top: 15px;
+}
+.logo-normal {
+    height: 40px; /* Adjust this value as needed */
+}
+
+.logo-small {
+    height: 30px; /* Adjust this value for the smaller logo */
+}
+
+/* Remove side spacing and center navbar */
+.navbar {
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0 auto;
+}
+
+/* Hover effect for nav-links */
+.nav-link {
+    color: #343a40; /* Default color */
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #007bff; /* Change color on hover */
+    background-color: rgba(0, 123, 255, 0.1); /* Light blue background on hover */
+}
+
+/* Active link styling */
+.nav-link.active {
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Smaller padding for more compact look */
+.navbar-nav .nav-item .nav-link {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Optional: Fixed-top adjustment for body padding */
+body {
+    padding-top: 70px; /* Adjust based on navbar height */
+}

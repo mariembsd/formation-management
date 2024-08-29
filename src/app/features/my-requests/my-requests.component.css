@@ -1,0 +1,113 @@
+.mes-demandes-page {
+    padding: 20px;
+    background: #D1E9F6;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+.summary-section button{
+    background-color: #68d6e5;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.summary-section {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+.summary-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    width: 30%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, background 0.3s;
+}
+
+.summary-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.detailed-requests {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.request-item {
+    background: #a4d9ea;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 10px;
+    width: 45%;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s;
+    /* Adjust image size */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.request-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.request-item h2, .request-item p {
+    margin: 10px 0;
+}
+
+.detail-button {
+    background-color: #68d6e5;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.detail-button:hover {
+    background-color: #98fb98;
+}
+
+.action-section {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.new-request-button {
+    background-color: #68d6e5;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.new-request-button:hover {
+    background-color: #98fb98;
+    transform: translateY(-3px);
+}
+.summary-card button:hover {
+    background-color: #98fb98;
+    transform: translateY(-3px);
+}

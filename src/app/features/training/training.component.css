@@ -1,0 +1,170 @@
+/* formations.component.css */
+
+/* Container for the entire page */
+.formations-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f4f4; /* Light background for better readability */
+  }
+  
+  /* Heading for the formations section */
+  .formations-page h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top:50px;
+    color: #03346E; /* Dark color for good contrast */
+  }
+  
+  /* Container for the list of formations */
+  .formations-list {
+    display: flex;
+    /*flex-direction: column;*/
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    max-width: 900px;
+    justify-content: space-between; /* Limiting the width for better readability */
+  }
+  
+  /* Each formation item */
+  /* Container for displaying list of formations */
+  .formations-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between items */
+    justify-content: space-between; /* Align items to fill space evenly */
+  }
+  
+  /* Each formation item */
+  .formation-item {
+    width: calc(50% - 20px); /* Two items per line with gap */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centering content */
+    padding: 20px;
+    border: 1px solid #ddd; /* Light border to separate items */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #fff; /* White background for items */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center; /* Center text */
+    box-sizing: border-box;
+  }
+  .formation-item img {
+    max-width: 100%; /* Ensures the image does not exceed the width of its container */
+    height: 300px; /* Fixed height for images */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    margin-bottom: 15px; /* Space between image and text */
+  }
+  formation-item h2, .formation-item p {
+    margin: 0;
+    padding: 0;
+  }
+  .formation-item p {
+    margin-top: 10px; /* Space between title and description */
+  }
+  /* Hover effect for items */
+  .formation-item:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+  }
+  
+  
+  /* Image styling */
+  .formation-image {
+    width: 100%; /* Make image fit within the container */
+    max-width: 300px; /* Limit the maximum width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners for images */
+    margin-bottom: 15px; /* Space below image */
+  }
+  
+  /* Heading for each formation */
+  .formation-item h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #00224D; /* Angular's primary blue color */
+    font-weight: bold;
+  }
+  
+  /* Description for each formation */
+  .formation-item p {
+    font-size: 1.2em;
+    color: black;
+    margin-bottom: 20px;
+  }
+  
+  /* Button styling */
+  .formation-item button {
+    padding: 10px 15px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #007bff; /* Primary button color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .formation-item button:hover {
+    background-color: #0056b3; /* Darker color on hover */
+  }
+  
+  /* Section for managing formations */
+  .manage-formations {
+    margin-top: 30px;
+    padding: 20px;
+    width: 100%;
+    max-width: 900px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .manage-formations h2 {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    color: #333;
+  }
+  
+  /* Form fields in the management section */
+  .manage-formations input, 
+  .manage-formations textarea {
+    width: calc(100% - 22px); /* Full width with padding accounted */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .manage-formations input[type="text"], 
+  .manage-formations input[type="url"] {
+    height: 40px; /* Consistent height for text inputs */
+  }
+  
+  .manage-formations textarea {
+    height: 80px; /* Adequate height for textarea */
+    resize: vertical; /* Allow resizing vertically only */
+  }
+  
+  .manage-formations button {
+    padding: 10px 15px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #28a745; /* Success color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .manage-formations button:hover {
+    background-color: #218838; /* Darker color on hover */
+  }
+  
+  
+  

@@ -1,0 +1,32 @@
+<div class="suggestions-page">
+    <!-- Section to add or manage formations (for admins or managers) -->
+    <div class="manage-formations" *ngIf="isManager">
+      <h2>Gérer les Formations</h2>
+      <button (click)="toggleAddForm()">Ajouter une Formation</button>
+      
+      <!-- Form for adding new formations -->
+      <div *ngIf="showAddForm" class="add-formation-form">
+        <h3>Ajouter une Formation</h3>
+        <form (ngSubmit)="submitFormation()">
+          <div class="form-group">
+            <label for="title">Titre:</label>
+            <input id="title" type="text" [(ngModel)]="newFormation.title" name="title" required />
+          </div>
+          
+          <div class="form-group">
+            <label for="description">Description:</label>
+            <textarea id="description" [(ngModel)]="newFormation.description" name="description" required></textarea>
+          </div>
+          
+          <div class="form-group">
+            <label for="image">URL de l'Image:</label>
+            <input id="image" type="text" [(ngModel)]="newFormation.image" name="image" required />
+          </div>
+          
+          <button type="submit">Ajouter</button>
+          <button type="button" (click)="toggleAddForm()">Annuler</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  

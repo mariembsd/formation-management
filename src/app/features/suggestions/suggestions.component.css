@@ -1,0 +1,128 @@
+.suggestions-page {
+    padding: 40px;
+    background: linear-gradient(135deg, #ffb6c1, #add8e6, #98fb98); /* Colorful light gradient */
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.manage-formations {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(240, 255, 240, 0.9)); /* Light gradient background */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Softer shadow for a floating effect */
+    max-width: 500px;
+    width: 100%;
+    animation: fadeIn 1s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    /* Center vertically and horizontally */
+}
+.manage-formations button{
+    background-color: #ff4500; /* Vibrant orange-red background */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 1em;
+    width: 45%; /* Ensure buttons are not too wide */
+}
+.manage-formations h2 {
+    text-align: center;
+    color: #4b0082; /* Dark indigo */
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.add-formation-form {
+    width: 100%;
+}
+
+.add-formation-form h3 {
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.add-formation-form .form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.add-formation-form label {
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.add-formation-form input, 
+.add-formation-form textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    background-color: #f0f8ff; /* Alice blue input background */
+    color: #333;
+}
+
+.add-formation-form input:focus, 
+.add-formation-form textarea:focus {
+    border-color: #32cd32; /* Lime green border on focus */
+    outline: none;
+}
+
+.add-formation-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    width: 100%; /* Ensure buttons stretch across full width */
+}
+
+.add-formation-form button {
+    background-color: #ff4500; /* Vibrant orange-red background */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 1em;
+    width: 40%; /* Ensure buttons are not too wide */
+    margin: 0 10px; /* Add horizontal space between buttons */
+    margin-left: 27px;
+}
+
+.add-formation-form button:last-child {
+    margin-right: 0; /* Remove margin for the last button if needed */
+}
+
+.add-formation-form button:hover {
+    background-color: #e63946; /* Richer red */
+    transform: translateY(-3px);
+}
+
+.add-formation-form .cancel-button {
+    background-color: #c0c0c0; /* Light gray background */
+    margin-left: 10px;
+}
+
+.add-formation-form .cancel-button:hover {
+    background-color: #a9a9a9; /* Darker gray on hover */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

@@ -1,0 +1,36 @@
+<div class="container">
+    <h1>Gestion des Formations</h1>
+  
+    <!-- Form for editing an existing formation -->
+    <div *ngIf="editFormation" class="form-container">
+      <h2>Modifier une Formation</h2>
+      <form (ngSubmit)="updateFormation()">
+        <div class="form-group">
+          <label for="edit-title">Titre:</label>
+          <input id="edit-title" type="text" [(ngModel)]="editFormation.title" name="title" required />
+        </div>
+  
+        <div class="form-group">
+          <label for="edit-description">Description:</label>
+          <textarea id="edit-description" [(ngModel)]="editFormation.description" name="description" required></textarea>
+        </div>
+  
+        <button type="submit">Mettre à jour</button>
+        <button type="button" (click)="editFormation = null">Annuler</button>
+      </form>
+    </div>
+  
+    <!-- List of existing formations -->
+    <div class="list-container">
+      <h2>Liste des Formations</h2>
+      <ul>
+        <li *ngFor="let formation of formations">
+          <h3>{{ formation.title }}</h3>
+          <p>{{ formation.description }}</p>
+          <button (click)="edit(formation)">Modifier</button>
+          <button (click)="deleteFormation(formation.id)">Supprimer</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
