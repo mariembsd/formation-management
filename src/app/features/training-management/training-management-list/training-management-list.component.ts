@@ -6,8 +6,8 @@ import { CommonModule } from '@angular/common';
   selector: 'app-training-management',
   standalone: true,
   imports: [CommonModule,FormsModule],
-  templateUrl: './training-management.component.html',
-  styleUrl: './training-management.component.css'
+  templateUrl: './training-management-list.component.html',
+  styleUrl: './training-management-list.component.css'
 })
 export class TrainingManagementComponent {
 
