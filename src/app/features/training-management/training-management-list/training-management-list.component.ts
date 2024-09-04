@@ -3,21 +3,20 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-training-management',
+  selector: 'app-training-management-list',
   standalone: true,
-  imports: [CommonModule,FormsModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './training-management-list.component.html',
-  styleUrl: './training-management-list.component.css'
+  styleUrls: ['./training-management-list.component.css'] // Fixed typo (styleUrl -> styleUrls)
 })
-export class TrainingManagementComponent {
+export class TrainingManagementListComponent {
 
   formations = [
     { id: 1, title: 'Formation 1', description: 'Description of Formation 1' },
     { id: 2, title: 'Formation 2', description: 'Description of Formation 2' }
   ];
-  
-  editFormation: any = null;
 
+  editFormation: any = null;
 
   edit(formation: any) {
     this.editFormation = { ...formation };
@@ -37,4 +36,3 @@ export class TrainingManagementComponent {
     this.formations = this.formations.filter(f => f.id !== id);
   }
 }
-

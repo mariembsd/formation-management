@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FeedbackComponent } from './feedback.component';
+import { ParticipateListComponent } from './participate-list.component';
 
-describe('FeedbackComponent', () => {
-  let component: FeedbackComponent;
-  let fixture: ComponentFixture<FeedbackComponent>;
+describe('ParticipateListComponent', () => {
+  let component: ParticipateListComponent;
+  let fixture: ComponentFixture<ParticipateListComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [FeedbackComponent]
+      imports: [ParticipateListComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(FeedbackComponent);
+    fixture = TestBed.createComponent(ParticipateListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

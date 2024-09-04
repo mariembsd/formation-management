@@ -1,0 +1,151 @@
+.requests-page {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+  }
+  
+  .requests-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .create-request-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .create-request-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .filters {
+    background-color: #ffffff;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .filter-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .filter-item {
+    flex: 1;
+    margin-right: 10px;
+  }
+  
+  .apply-filter-btn {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .apply-filter-btn:hover {
+    background-color: #218838;
+  }
+  
+  .requests-list {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .request-item {
+    border-bottom: 1px solid #dddddd;
+    padding: 15px 0;
+    transition: background-color 0.3s ease;
+  }
+  
+  .request-item:last-child {
+    border-bottom: none;
+  }
+  
+  .request-item:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .request-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .status {
+    padding: 5px 10px;
+    border-radius: 4px;
+    color: white;
+    text-transform: capitalize;
+  }
+  
+  .status.pending {
+    background-color: #ffc107;
+  }
+  
+  .status.approved {
+    background-color: #28a745;
+  }
+  
+  .status.rejected {
+    background-color: #dc3545;
+  }
+  
+  .request-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .view-details-btn {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .view-details-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .prev-page-btn,
+  .next-page-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .prev-page-btn:hover,
+  .next-page-btn:hover {
+    background-color: #0056b3;
+  }
+  
