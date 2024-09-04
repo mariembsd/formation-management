@@ -3,7 +3,6 @@ import { AccueilListComponent } from './features/accueil/accueil-list/accueil-li
 import { MyRequestListComponent } from './features/my-request/my-request-list/my-request-list.component';
 import { ParticipateListComponent } from './features/participate/participate-list/participate-list.component';
 import { SuggestionsListComponent } from './features/suggestions/suggestions-list/suggestions-list.component';
-import { TrainingManagementListComponent } from './features/training-management/training-management-list/training-management-list.component';
 import { FeedbackListComponent } from './features/feedback/feedback-list/feedback-list.component';
 
 export const routes: Routes = [
@@ -22,6 +21,25 @@ export const routes: Routes = [
     loadChildren: () => import('./features/training-management/training-management.module').then(m => m.TrainingManagementModule), 
     title: 'ADS | Training Management' 
   },
-  { path: 'feedback', component: FeedbackListComponent, title: 'ADS | Feedback' },
+  { 
+    path: 'feedback', 
+    loadChildren: () => import('./features/feedback/feedback.module').then(m => m.FeedbackModule), 
+    title: 'ADS | Feedback' 
+  },
+  { 
+    path: 'my-requests', 
+    loadChildren: () => import('./features/my-request/my-request.module').then(m => m.MyRequestsModule), 
+    title: 'ADS | My Requests' 
+  },
+  { 
+    path: 'participate', 
+    loadChildren: () => import('./features/participate/participate.module').then(m => m.ParticipateModule), 
+    title: 'ADS | Participate' 
+  },
+  { 
+    path: 'suggestions', 
+    loadChildren: () => import('./features/suggestions/suggestions.module').then(m => m.SuggestionsModule), 
+    title: 'ADS | Suggestions' 
+  },
   { path: '**', redirectTo: 'home-page', title: 'ADS | Not Found' }
 ];
