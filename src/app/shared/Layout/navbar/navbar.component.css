@@ -1,7 +1,8 @@
 /* Custom Logo Size */
-.container{
+.container {
     margin-top: 15px;
 }
+
 .logo-normal {
     height: 40px; /* Adjust this value as needed */
 }
@@ -15,30 +16,78 @@
     padding-left: 0;
     padding-right: 0;
     margin: 0 auto;
+    background-color: #ffffff; /* White background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 /* Hover effect for nav-links */
 .nav-link {
-    color: #343a40; /* Default color */
-    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    color: #333; /* Default color */
+    font-weight: 500; /* Slightly bolder font */
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
 }
 
 .nav-link:hover {
-    color: #007bff; /* Change color on hover */
-    background-color: rgba(0, 123, 255, 0.1); /* Light blue background on hover */
+    color: #ffffff; /* Change color to white on hover */
+    background-color: #007bff; /* Blue background on hover */
+    border-radius: 4px; /* Rounded corners for hover background */
+    transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
 /* Active link styling */
 .nav-link.active {
     font-weight: bold;
-    color: #007bff;
+    color: #ffffff;
+    background-color: #0056b3; /* Darker blue for active link */
+    border-radius: 4px; /* Rounded corners for active background */
 }
 
 /* Smaller padding for more compact look */
 .navbar-nav .nav-item .nav-link {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 10px 15px; /* Adjust padding for a more compact look */
 }
+
+/* Navbar Toggle Button */
+/* Navbar Toggle Button */
+.navbar-toggler {
+    border: none; /* Remove default border */
+    outline: none; /* Remove default outline */
+    background-color: transparent; /* Transparent background */
+    box-shadow: none; /* Remove box shadow */
+}
+
+.navbar-toggler-icon {
+    display: inline-block;
+    width: 24px; /* Adjust width as needed */
+    height: 2px; /* Height of the lines */
+    background-color: #007bff; /* Line color */
+    position: relative;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+    content: "";
+    display: block;
+    width: 24px; /* Width of the lines */
+    height: 2px; /* Height of the lines */
+    background-color: #007bff; /* Line color */
+    position: absolute;
+    left: 0;
+}
+
+.navbar-toggler-icon::before {
+    top: -6px; /* Adjust to place the first line */
+}
+
+.navbar-toggler-icon::after {
+    top: 6px; /* Adjust to place the second line */
+}
+
+/* Optional: Add some space around the toggler icon */
+.navbar-toggler {
+    padding: 0.5rem; /* Add padding if needed */
+}
+
 
 /* Optional: Fixed-top adjustment for body padding */
 body {

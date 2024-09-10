@@ -1,151 +1,192 @@
-.requests-page {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-  }
-  
-  .requests-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .create-request-btn {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .create-request-btn:hover {
-    background-color: #0056b3;
-  }
-  
-  .filters {
-    background-color: #ffffff;
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .filter-options {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .filter-item {
-    flex: 1;
-    margin-right: 10px;
-  }
-  
-  .apply-filter-btn {
-    padding: 10px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .apply-filter-btn:hover {
-    background-color: #218838;
-  }
-  
-  .requests-list {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .request-item {
-    border-bottom: 1px solid #dddddd;
-    padding: 15px 0;
-    transition: background-color 0.3s ease;
-  }
-  
-  .request-item:last-child {
-    border-bottom: none;
-  }
-  
-  .request-item:hover {
-    background-color: #f1f1f1;
-  }
-  
-  .request-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .status {
-    padding: 5px 10px;
-    border-radius: 4px;
-    color: white;
-    text-transform: capitalize;
-  }
-  
-  .status.pending {
-    background-color: #ffc107;
-  }
-  
-  .status.approved {
-    background-color: #28a745;
-  }
-  
-  .status.rejected {
-    background-color: #dc3545;
-  }
-  
-  .request-details {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 10px;
-  }
-  
-  .view-details-btn {
-    padding: 5px 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .view-details-btn:hover {
-    background-color: #0056b3;
-  }
-  
-  .pagination {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-  }
-  
-  .prev-page-btn,
-  .next-page-btn {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .prev-page-btn:hover,
-  .next-page-btn:hover {
-    background-color: #0056b3;
-  }
-  
+/* General Styles */
+.my-requests-container {
+  padding: 20px;
+  margin-top: 80px; /* Adjust as needed for spacing */
+  background-color: #f4f8fc; /* Light blue background for the page */
+  color: #333; /* Darker text color for contrast */
+  text-align: center; /* Center all text */
+}
+
+/* Title */
+.page-title {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #007bff; /* Darker shade for a professional look */
+  text-align: center;
+}
+
+/* Request Card Styles */
+.requests-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Space between cards */
+}
+.request-card {
+  background-color: #ffffff; /* White background for cards */
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 20px;
+  max-width: 600px; /* Center card width */
+  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.request-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+.request-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.request-header h2 {
+  font-size: 1.5rem;
+  color: #333; /* Dark text color */
+}
+.status-label {
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #ffffff; /* White text for better contrast */
+}
+
+.status-label.pending {
+  background-color: #ff9800; /* Orange for pending */
+}
+
+.status-label.approved {
+  background-color: #4caf50; /* Green for approved */
+}
+
+.status-label.rejected {
+  background-color: #f44336; /* Red for rejected */
+}
+/* Request details styling */
+.request-details p {
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+/* Button styling */
+button{
+  background-color: #007bff; /* Light blue background */
+  color: #ffffff; /* White text color */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Button hover effect */
+  margin-top: 20px;
+}
+
+button {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+/* No requests message styling */
+.no-requests {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.no-requests p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.no-requests button.mat-raised-button {
+  background-color: #4caf50; /* Green for call to action */
+}
+.priority-indicator {
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.priority-high {
+  background-color: #e57373; /* Light red for high priority */
+}
+
+.priority-medium {
+  background-color: #ffb74d; /* Light orange for medium priority */
+}
+
+.priority-low {
+  background-color: #64b5f6; /* Light blue for low priority */
+}
+
+.request-tags {
+  margin: 10px 0;
+}
+
+.tag {
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 2px;
+  border-radius: 5px;
+  background-color: #e0e0e0; /* Light grey background for tags */
+  color: #333; /* Darker text color for readability */
+  transition: background-color 0.3s ease;
+}
+
+.tag:hover {
+  background-color: #b0bec5; /* Darker grey on hover for tags */
+}
+
+/* Insights Section */
+.insights-container {
+  margin-top: 40px;
+  padding: 20px;
+  background: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.title{
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #007bff; 
+  text-align: center;
+}
+
+.insights {
+  display: flex;
+  justify-content: center; /* Centering the insight cards */
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.insight-card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  flex: 1;
+  max-width: 250px; /* Ensures cards are not too wide */
+  box-shadow: 0 4px 8px rgba(0, 157, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.insight-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.insight-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+  color: #000a35;
+}
+
+.insight-card p {
+  font-size: 1.5rem;
+  color: #333;
+}

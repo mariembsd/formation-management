@@ -12,8 +12,10 @@ import { CommonModule } from '@angular/common';
 export class TrainingManagementListComponent {
 
   formations = [
-    { id: 1, title: 'Formation 1', description: 'Description of Formation 1' },
-    { id: 2, title: 'Formation 2', description: 'Description of Formation 2' }
+    { id: 1, title: 'Formation Développement Web Avancé', description: 'Perfectionnez vos compétences en développement web avec des techniques avancées en HTML, CSS, et JavaScript. Idéal pour les développeurs expérimentés.' },
+    { id: 2, title: 'Formation Introduction au Machine Learning', description: 'Découvrez les concepts fondamentaux du Machine Learning et comment appliquer des algorithmes dapprentissage automatique pour résoudre des problèmes complexes.' },
+    { id: 1, title: 'Formation Angular', description: 'Perfectionnez vos compétences en développement web avec des techniques avancées en HTML, CSS, et JavaScript. Idéal pour les développeurs expérimentés.' },
+    { id: 2, title: 'Formation Agile', description: 'Découvrez les concepts fondamentaux du Machine Learning et comment appliquer des algorithmes dapprentissage automatique pour résoudre des problèmes complexes.' }
   ];
 
   editFormation: any = null;

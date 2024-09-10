@@ -1,32 +1,64 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-my-requests-list',
   templateUrl: './my-request-list.component.html',
-  styleUrls: ['./my-request-list.component.css']
+  styleUrls: ['./my-request-list.component.scss']
 })
-export class MyRequestListComponent {
+export class MyRequestListComponent implements OnInit {
   requests = [
-    { title: 'Formation en Angular', description: 'Demande pour une formation avancée en Angular.', status: 'pending', date: new Date() },
-    { title: 'Formation en TypeScript', description: 'Demande pour une formation sur TypeScript.', status: 'approved', date: new Date() },
-    { title: 'Formation en Design Patterns', description: 'Demande pour une formation sur les Design Patterns.', status: 'rejected', date: new Date() }
+    {
+      id: 1,
+      trainingTitle: 'Angular Advanced Training',
+      submissionDate: new Date('2024-09-01'),
+      requestedDate: new Date('2024-10-15'),
+      status: 'pending',
+      approvedBy: 'John Doe'
+    },
+    {
+      id: 2,
+      trainingTitle: 'Leadership Skills',
+      submissionDate: new Date('2024-08-20'),
+      requestedDate: new Date('2024-09-30'),
+      status: 'approved',
+      approvedBy: 'Jane Smith'
+    }
   ];
+totalRequests: any;
+pendingRequests: any;
+approvedRequests: any;
+
+  constructor() {}
+
+  ngOnInit(): void {}
 
   getStatusClass(status: string): string {
-    switch (status.toLowerCase()) {
-      case 'pending':
-        return 'pending';
-      case 'approved':
-        return 'approved';
-      case 'rejected':
-        return 'rejected';
-      default:
-        return '';
-    }
+    return {
+      'approved': 'approved',
+      'pending': 'pending',
+      'rejected': 'rejected'
+    }[status] || '';
   }
+  
+  getProgress(status: string): number {
+    return {
+      'approved': 100,
+      'pending': 50,
+      'rejected': 0
+    }[status] || 0;
+  }
+  
+  getProgressLabel(status: string): string {
+    return {
+      'approved': 'Completed',
+      'pending': 'In Progress',
+      'rejected': 'Rejected'
+    }[status] || 'Unknown';
+  }
+  
 
-  viewDetails(request: any) {
-    // Logic to display detailed information about the request
-    console.log('Viewing details for:', request);
+  viewDetails(id: number): void {
+    // Navigate to the detailed view or open a dialog
+    console.log('Viewing details for request ID:', id);
   }
 }

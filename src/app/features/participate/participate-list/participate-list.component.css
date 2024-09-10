@@ -1,0 +1,214 @@
+/* General Container */
+.participate-container {
+  max-width: 700px;
+  margin: 100px auto;
+  background-color: #ffffff;
+  padding: 50px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  animation: fadeInUp 1.2s ease-in-out;
+  position: relative;
+  background-image: linear-gradient(to right, #f0f4f8, #d9e4f5);
+}
+
+/* Keyframe Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Title */
+.title {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #ff5733;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  animation: bounceIn 1.5s ease;
+}
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* Form Styles */
+.form-group {
+  margin-bottom: 30px;
+  animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.form-group label {
+  display: block;
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: #f9fafb;
+  transition: all 0.4s;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #ff5733;
+  box-shadow: 0 0 10px rgba(255, 87, 51, 0.5);
+}
+.submit-button {
+  width: 100%;
+  padding: 15px;
+  background-color: #ff5733;
+  border: none;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.4s, transform 0.4s;
+}
+.submit-button:hover {
+  background-color: #c63c1f;
+  transform: translateY(-3px);
+}
+.additional-content {
+  margin-top: 60px;
+}
+.is-invalid {
+  border-color: #dc3545;
+}
+
+.invalid-feedback {
+  color: #dc3545;
+  margin-top: 5px;
+  font-size: 0.875rem;
+}
+
+/* Submit Button */
+.submit-button {
+  width: 100%;
+  padding: 15px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+/* Additional Sections */
+.about-training-section,
+.testimonials-section,
+.cta-section {
+  margin: 50px auto;
+  max-width: 700px;
+  text-align: center;
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  
+}
+
+.section-title {
+  font-size: 1.8rem;
+  color: #ff5733;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  animation: zoomIn 1.2s ease;
+}
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.section-description {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+  background: #f0f4f8;
+  padding: 15px;
+  border-radius: 8px;
+  animation: fadeIn 1.4s ease;
+}
+blockquote {
+  border-left: 5px solid #ff5733;
+  padding-left: 20px;
+  font-style: italic;
+}
+.testimonial {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 20px;
+  padding: 20px;
+  border-left: 5px solid #007bff;
+  background-color: #fff;
+}
+
+.cta-description {
+  font-size: 1rem;
+}
+
+.cta-link {
+  color: #007bff;
+  font-weight: bold;
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+.cta-link:hover {
+  text-decoration: underline;
+  color: #ff5733;
+}
+
+.page-footer {
+  text-align: center;
+  margin-top: 50px;
+  color: #777;
+}

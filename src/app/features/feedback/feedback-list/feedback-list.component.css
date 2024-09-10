@@ -1,0 +1,198 @@
+/* Container for the Feedback Section */
+.feedback-container {
+    background-color: #ffffff;
+    padding: 60px 30px;
+    border-radius: 12px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeInUp 0.8s ease-in-out;
+}
+
+/* Section Title Styling */
+.section-title {
+    font-size: 36px;
+    color: #0066cc;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 700;
+    animation: fadeInDown 0.6s ease-in-out;
+}
+
+/* Section Description Styling */
+.section-description {
+    text-align: center;
+    font-size: 20px;
+    color: #fdbf06;
+    margin-bottom: 45px;
+    font-style: bold;
+    animation: fadeIn 0.7s ease-in-out;
+}
+
+/* Feedback Form Styling */
+.feedback-form {
+    margin-bottom: 55px;
+}
+
+/* Form Group Styling */
+.form-group {
+    margin-bottom: 22px;
+    animation: slideInLeft 0.6s ease-in-out;
+}
+
+/* Form Control (Input Fields) Styling */
+.form-control {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-control:focus {
+    border-color: #0066cc;
+    box-shadow: 0 0 10px rgba(0, 102, 204, 0.3);
+}
+
+/* Star Rating Styling */
+/* Container for the rating */
+.rating {
+    display: flex;
+    gap: 5px;
+    font-size: 24px;
+    color: #cccccc; /* Default color for stars */
+}
+
+/* Star styling */
+.rating span {
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Highlighted stars on hover */
+.rating span:hover,
+.rating span:hover ~ span {
+    color: #ffcc00; /* Color for highlighted stars */
+    transform: scale(1.2); /* Slightly increase size on hover */
+}
+
+/* Applied color for selected stars */
+.rating span.selected {
+    color: #ffcc00; /* Color for selected stars */
+}
+
+/* Primary Button Styling */
+.btn-primary {
+    background-color: #55d87a;
+    border-color: #55d87a;
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #004d99;
+    transform: translateY(-3px);
+}
+
+/* Previous Feedback Section Styling */
+.previous-feedback {
+    margin-top: 55px;
+}
+
+/* Title for Previous Feedback */
+.previous-title {
+    font-size: 30px;
+    color: #333333;
+    margin-bottom: 35px;
+    text-align: center;
+    font-weight: 600;
+    animation: fadeIn 0.7s ease-in-out;
+}
+
+/* Feedback Carousel Styling */
+.feedback-carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 25px;
+    animation: slideInUp 0.8s ease-in-out;
+}
+
+/* Individual Feedback Item Styling */
+.feedback-item {
+    background-color: #0066cc;
+    color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+    min-width: 320px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.feedback-item:hover {
+    background-color: #004d99;
+    transform: translateY(-5px);
+}
+
+/* Feedback Item Title Styling */
+.feedback-item h4 {
+    margin-top: 12px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Keyframe Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

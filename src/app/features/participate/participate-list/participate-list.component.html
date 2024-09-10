@@ -1,1 +1,95 @@
-<p>participate-list works!</p>
+<div class="participate-container">
+  <h2 class="title">Participer à une Formation</h2>
+  <form [formGroup]="participateForm" (ngSubmit)="onSubmit()" novalidate>
+    <div class="form-group">
+      <label for="name">Nom Complet</label>
+      <input
+        type="text"
+        id="name"
+        formControlName="name"
+        [ngClass]="{ 'is-invalid': submitted && f['name'].errors }"
+        placeholder="Entrez votre nom complet"
+      />
+      <div *ngIf="submitted && f['name'].errors" class="invalid-feedback">
+        Le nom est requis.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Adresse Email</label>
+      <input
+        type="email"
+        id="email"
+        formControlName="email"
+        [ngClass]="{ 'is-invalid': submitted && f['email'].errors }"
+        placeholder="Entrez votre email"
+      />
+      <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+        <div *ngIf="f['email'].errors">L'email est requis.</div>
+        <div *ngIf="f['email'].errors">Email invalide.</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="training">Choisir une Formation</label>
+      <select
+        id="training"
+        formControlName="training"
+        [ngClass]="{ 'is-invalid': submitted && f['training'].errors }"
+      >
+        <option value="">-- Sélectionnez une formation --</option>
+        <option value="angular">Formation Angular Avancée</option>
+        <option value="react">Atelier React.js</option>
+        <option value="vue">Découverte de Vue.js</option>
+      </select>
+      <div *ngIf="submitted && f['training'].errors" class="invalid-feedback">
+        Veuillez sélectionner une formation.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="message">Message (Optionnel)</label>
+      <textarea
+        id="message"
+        formControlName="message"
+        placeholder="Votre message"
+        rows="4"
+      ></textarea>
+    </div>
+
+    <button type="submit" class="submit-button">Participer</button>
+  </form>
+</div>
+
+<!-- Separate sections -->
+<div class="about-training-section">
+  <h3 class="section-title">À Propos des Formations</h3>
+  <p class="section-description">
+    Nos formations sont conçues pour vous aider à acquérir des compétences pratiques et à jour dans le domaine de la technologie.
+    Découvrez nos différents programmes et choisissez celui qui correspond le mieux à vos besoins professionnels.
+  </p>
+</div>
+
+<div class="testimonials-section">
+  <h3 class="section-title">Avis de Nos Participants</h3>
+  <blockquote class="testimonial">
+    <p>"La formation était incroyable ! Les instructeurs étaient très compétents et les ressources fournies étaient extrêmement utiles."</p>
+    <footer>- Alice Dupont</footer>
+  </blockquote>
+  <blockquote class="testimonial">
+    <p>"Un excellent programme qui m'a permis de renforcer mes compétences en développement web. Je recommande vivement."</p>
+    <footer>- Marc Dubois</footer>
+  </blockquote>
+</div>
+
+<div class="cta-section">
+  <h3 class="section-title">Intéressé par d'autres formations ?</h3>
+  <p class="cta-description">
+    Nous proposons une gamme complète de formations adaptées à différents niveaux et intérêts.
+    <a href="/formations" class="cta-link">Découvrez toutes nos formations ici</a>.
+  </p>
+</div>
+
+<footer class="page-footer">
+  <p>© 2024 Formation Management. Tous droits réservés.</p>
+</footer>

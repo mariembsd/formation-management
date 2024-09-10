@@ -1,72 +1,146 @@
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  background: #f4f7f9; /* Light gray background for the entire page */
+  margin: 0;
+  padding: 0;
+}
+
 .container {
-    padding: 20px;
-    background: linear-gradient(135deg, #f0f8ff, #e6f7ff); /* Light blue gradient */
-    color: #333;
-    font-family: 'Roboto', sans-serif;
+  padding: 20px;
+  background: linear-gradient(135deg, #e6f7ff, #cceeff); /* Light blue gradient */
+  color: #333;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styles */
+h1 {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 2.8em;
+  color: #1e90ff; /* Bright blue color for the header */
+  margin-bottom: 20px;
+}
+
+/* Form Container Styles */
+.form-container {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  animation: fadeIn 1s ease-out;
+}
+
+/* Form Group Styles */
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-size: 1.1em;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1em;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: #1e90ff; /* Bright blue border on focus */
+  box-shadow: 0 0 8px rgba(30, 144, 255, 0.3); /* Blue shadow on focus */
+  outline: none;
+}
+
+/* Button Styles */
+button {
+  background-color: #1e90ff; /* Bright blue background */
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  margin-right: 15px;
+  font-size: 1em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: #4682b4; /* Darker blue on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+button:focus {
+  outline: none;
+}
+
+/* List Container Styles */
+.list-container {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-out;
+}
+
+/* List Styles */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.3s ease;
+}
+
+li:hover {
+  background-color: #f0f8ff; /* Light blue background on hover */
+}
+
+h3 {
+  margin: 0;
+  color: #1e90ff; /* Bright blue color for list item titles */
+  font-size: 1.4em;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
   }
-  
-  h1 {
-    text-align: center;
-    font-size: 2.5em;
-    margin-bottom: 20px;
+  to {
+      opacity: 1;
+      transform: translateY(0);
   }
-  
-  .form-container {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .container {
+      padding: 15px;
   }
-  
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  input, textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-  }
-  
+
   button {
-    background-color: #007bff; /* Blue background */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-    margin-right: 10px;
+      padding: 10px 20px;
   }
-  
-  button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+
+  .form-container, .list-container {
+      padding: 20px;
   }
-  
-  .list-container {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  li {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  h3 {
-    margin: 0;
-  }
+}
