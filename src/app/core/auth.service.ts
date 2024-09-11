@@ -1,26 +1,29 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
+  private registerUrl = 'http://localhost:8080/api/auth/register';
+  private loginUrl = 'http://localhost:8080/api/auth/login';
 
-  constructor() { }
+  constructor(private http: HttpClient) {}
 
-  login(email: string, password: string) {
-    // Implement login logic here, likely with an HTTP request to your backend API
+  login(email: string, password: string): Observable<any> {
+    return this.http.post(this.loginUrl, { email, password });
   }
 
-  register(name: string, email: string, password: string) {
-    // Implement registration logic here, likely with an HTTP request to your backend API
+  register(name: string, email: string, password: string): Observable<any> {
+    return this.http.post(this.registerUrl, { username: name, email, password });
   }
 
   logout() {
-    // Implement logout logic here, e.g., clearing the token from localStorage
+    localStorage.removeItem('token');
   }
 
   isAuthenticated(): boolean {
-    // Implement logic to check if the user is authenticated (e.g., check if a token exists)
     return !!localStorage.getItem('token');
   }
 }

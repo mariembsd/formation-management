@@ -4,13 +4,19 @@ import { MyRequestListComponent } from './features/my-request/my-request-list/my
 import { ParticipateListComponent } from './features/participate/participate-list/participate-list.component';
 import { SuggestionsListComponent } from './features/suggestions/suggestions-list/suggestions-list.component';
 import { FeedbackListComponent } from './features/feedback/feedback-list/feedback-list.component';
+import { RegisterComponent } from './features/auth/register/register.component';
+import { LoginComponent } from './features/auth/login/login.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home-page', pathMatch: 'full' },
+  { path: 'register', component: RegisterComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'home-page', component: AccueilListComponent, title: 'ADS | Accueil' },
   { path: 'request', component: MyRequestListComponent, title: 'ADS | Request' },
   { path: 'participate', component: ParticipateListComponent, title: 'ADS | Participate' },
   { path: 'suggestion', component: SuggestionsListComponent, title: 'ADS | Suggestions' },
+  { path: 'feedback', component: FeedbackListComponent, title: 'ADS | Feedback' },
   { 
     path: 'training', 
     loadChildren: () => import('./features/training/training.module').then(m => m.TrainingModule), 
@@ -41,5 +47,5 @@ export const routes: Routes = [
     loadChildren: () => import('./features/suggestions/suggestions.module').then(m => m.SuggestionsModule), 
     title: 'ADS | Suggestions' 
   },
-  { path: '**', redirectTo: 'home-page', title: 'ADS | Not Found' }
+  { path: '**',  component: NotFoundComponent, title: 'ADS | Not Found' }
 ];
