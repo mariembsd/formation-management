@@ -6,6 +6,11 @@ body {
   padding: 0;
 }
 
+.container{
+  max-width: 1140px;
+  padding: 15px;
+}
+
 /* Header Styles */
 #banner {
   width: 100%;
@@ -71,6 +76,15 @@ body {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin: 20px;
+}
+
+.noshadow{
+  box-shadow: none!important;
+}
+
+label{
+  float: left;
 }
 
 /* Equal Box Height for Service Cards */
@@ -115,7 +129,7 @@ body {
 /* Contact Section Styles */
 #contact {
   padding: 60px 0;
-  background-color: #e9f5ff;
+  background-color: #f0f8ff;
   text-align: center;
 }
 
@@ -164,7 +178,7 @@ button.btn:hover {
 /* About Us Section */
 #about-us {
   padding: 60px 0;
-  background-color: #f9f9f9;
+  background-color: #f0f8ff;
 }
 
 #about-us h2 {
@@ -246,7 +260,7 @@ button.btn:hover {
 /* Testimonials Section */
 #testimonials {
   padding: 60px 0;
-  background-color: #f9f9f9;
+  background-color: #f0f8ff;
 }
 
 #testimonials h2 {
